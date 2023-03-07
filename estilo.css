@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Cyanhsla: hsla(179, 62%, 43%, 0.703);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(206, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    ---bgjoin:hsl(0, 0%, 100%);
+    --Gray: hsla(203, 44%, 93%, 0.508);
+    --black: hsla(0, 0%, 18%, 0.301);
+
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+}
+
+main{
+    display: grid;
+    place-items:center;
+    height: 100vh;
+    background-color: var(--LightGray);
+}
+/* Estilo el tamaño de la card */
+.card{
+    width: 85%;
+}
+.card__content{
+    padding: 1rem 1.3rem;
+}
+
+/* Estilo los contenedores */
+.card__content--join{
+    background-color: var(---bgjoin);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.card__content--subscription{
+    background-color: var(--Cyan);
+    position: relative;
+}
+.card__content--why{
+    background-color: var(--Cyanhsla);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Aplico grid para las dos secciones */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Estilo el contenedor join */
+
+.card__title{
+    font-size: 1.2em;
+}
+.card__title--join{
+    color: var(--Cyan);
+}
+.card__title--subscription,
+.card__title--why{
+    color: var(--LightGray);
+}
+
+.card__paragrhap{
+    color: var(--BrightYellow);
+    font-weight: 700;
+}
+
+.card__description{
+    color: var(--GrayishBlue);
+    font-size: 0.9em;
+    line-height:1.7;
+}
+
+/* Estilo el contenedor subscription */
+.card__content--subscription{
+    color: var(--LightGray);
+}
+.card__content--price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--LightGray);
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.card__price{
+    font-size:2em;
+    font-weight: 700;
+    position: absolute;
+}
+
+.card__per{
+    color: var(--Gray);
+    position: absolute;
+    left: 100px;
+}
+
+.card__content--link{
+    margin: 1.1rem 0 0.5rem 0;
+    display: inline-block;
+    background-color: var(--BrightYellow);
+    text-decoration: none;
+    padding: 1rem;
+    width: calc(90% - 0.2rem);
+    font-weight: 700;
+    color: var(---bgjoin);
+    text-align: center;
+    border-radius: 0.5rem;
+    filter: drop-shadow(2px 2px 3px var(--black));
+}
+
+/* Estilo el contenedor why con su lista */
+
+.card__list{
+    list-style: none;
+    padding: 0;
+    color: var(--LightGray);
+}
+
+@media (min-width: 48rem){
+    .card{
+        width: 85%;
+    }
+    .card__content{
+        padding: 1rem 2rem;
+    }
+    .card__content--price{
+        gap: 110rem;
+    }
+    .card__description{
+        font-size: 1em;
+    }
+    .card__content--join{
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card__content--subscription{
+        border-radius: 0 0 0 0.5rem;
+    }
+    .card__content--why{
+        border-radius: 0 0 0.5rem 0;
+    }
+    .card__content--link{
+        margin: 2.4rem 0 0.5rem 0;
+    }
+}
+
+@media (min-width: 64rem){
+    .card{
+        width: 60%;
+    }
+}
+@media (min-width: 80rem){
+    .card{
+        width: 50%;
+    }
+}
+@media (min-width: 90rem){
+    .card{
+        width: 44%;
+    }
+}
+@media (min-width: 120rem){
+    .card{
+        width: 33%;
+    }
+}
+@media (min-width: 150rem){
+    .card{
+        width: 25%;
+    }
+}
