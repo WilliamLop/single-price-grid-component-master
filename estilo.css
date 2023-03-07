@@ -24,12 +24,13 @@ body{
 main{
     display: grid;
     place-items:center;
-    height: 100vh;
+    height: auto;
     background-color: var(--LightGray);
 }
 /* Estilo el tamaño de la card */
 .card{
     width: 85%;
+    margin: 2.5rem auto;
 }
 .card__content{
     padding: 1rem 1.3rem;
@@ -47,6 +48,8 @@ main{
 .card__content--why{
     background-color: var(--Cyanhsla);
     border-radius: 0 0 0.5rem 0.5rem;
+    /* margin-bottom: 2.5rem; */
+
 }
 
 /* Aplico grid para las dos secciones */
@@ -126,8 +129,13 @@ main{
 }
 
 @media (min-width: 48rem){
+    main{
+        height: 100vh;
+    }
     .card{
         width: 85%;
+        margin: 0 auto;
+
     }
     .card__content{
         padding: 1rem 2rem;
